@@ -9,7 +9,8 @@ object HelloWorld {
     println(p01.length( List(1, 1, 2, 3, 5, 8)))
     println(p01.reverse(List(1, 1, 2, 3, 5, 8)))
     println(p01.isPalindrome(List(1, 2, 3, 2, 1)))
-   // println(p01.flatten(List(List(1, 1), 2, List(3, List(5, 8)))))
-    println(p01.compress(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)))
+    println(p01.flatten(List(List(1, 1), 2, List(3, List(5, 8)))))
+    println(p01.compress(List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')))
+    println(p01.pack(List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')))
   }
 }

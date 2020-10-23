@@ -1,6 +1,6 @@
-import java.util.Collections.list
-
 class P01 {
+
+
   def last(list: List[Int]): Int = {
     list.last
   }
@@ -31,15 +31,18 @@ class P01 {
     res
   }
 
-  def flatten(list: List[Any]) : List[Any]  = {
+  def flatten(list: List[Any]): List[Any] = list flatMap {
+    case subList: List[Any] => flatten(subList)
+    case element => List(element)
+  }
+
+  def compress(list: List[Any]): List[Any] = {
     list match {
-      case h::t=> if(h.isInstanceOf) h else flatten(t)
+      case el :: tail => el :: compress(list.dropWhile(_ == el))
+      case Nil => Nil
     }
   }
 
-  def compress(list: List[Symbol]): List[Symbol] = {
-list.distinct
-  }
 
 
 }
