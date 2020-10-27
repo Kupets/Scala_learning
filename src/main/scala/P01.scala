@@ -5,6 +5,7 @@ class P01 {
     list.last
   }
 
+  //use init
   def penultimate(list: List[Int]): Int = {
     list(list.length - 2)
   }
@@ -21,6 +22,7 @@ class P01 {
     list.reverse
   }
 
+  // use splitAt
   def isPalindrome(list: List[Int]): Boolean = {
     var res = false
     var center = list.length / 2
@@ -36,6 +38,7 @@ class P01 {
     case element => List(element)
   }
 
+  //? use fold
   def compress(list: List[Any]): List[Any] = {
     list match {
       case el :: tail => el :: compress(list.dropWhile(_ == el))
